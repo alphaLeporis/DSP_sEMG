@@ -1,5 +1,5 @@
 function [data, t, header] = BITalinoFileReader(file)
-    addpath('./jsonlab')
+    addpath('./json')
 
     headerlines = 3;
 
