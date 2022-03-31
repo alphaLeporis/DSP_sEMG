@@ -1,4 +1,4 @@
-function [data, t, header] = BITalinoFileReader(file)
+function [data, t, header] = FileParser(file)
     addpath('./json')
 
     headerlines = 3;
