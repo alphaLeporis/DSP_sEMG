@@ -5,4 +5,4 @@ dataNoOutliers = rmoutliers(data);
 standardDeviation = std(data);
 %%mean = mean(data);
 
-noOutlier = OutlierRemoval(data(:, 3:7), 2)
+OutlierRemoval(data(:, 3:7), 2)

@@ -1,0 +1,8 @@
+function [dataNoOutlier] = OutlierRemoval(data, order)
+%OUTLIERREMOVAL Summary of this function goes here
+%   Detailed explanation goes here
+standardDeviation = std(data(3:7));
+mean = mean(data);
+indicesToRemove = data < (mean-order*standardDeviation)
+end
+
