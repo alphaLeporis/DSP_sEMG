@@ -15,3 +15,6 @@ xlabel('f (Hz)'); ylabel('|X(k)|');
 figure
 phase=atan2(imag(fftData(:,3)),real(fftData(:,3)))*180/pi; %phase information
 plot(f,phase); %phase vs frequencie
+
+meanFreq = meanfreq(data);
+medianFreq = medfreq(data);
