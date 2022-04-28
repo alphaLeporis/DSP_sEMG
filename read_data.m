@@ -1,5 +1,5 @@
 %Reading data using fileparser
-[data, t, header] = FileParser("./PP01/S1_MVC_delt_links.txt");
+[data, t, header] = FileParser("./PP01/S1_MVC_delt_links.txt")
 
 dataMv = (data./(2^16)-1/2).*3;
 
@@ -14,7 +14,7 @@ stem(f,abs(fftData(4350:8700,3))); %magnitudes vs frequencies
 xlabel('f (Hz)'); ylabel('|X(k)|');
 figure
 phase=atan2(imag(fftData(4350:8700,3)),real(fftData(4350:8700,3)))*180/pi; %phase information
-plot(f,phase); %phase vs frequencie
+plot(f,phase); %phase vs frequencie frekwantie
 
 meanFreq = meanfreq(data);
 medianFreq = medfreq(data);
