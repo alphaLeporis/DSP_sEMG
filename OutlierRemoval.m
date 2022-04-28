@@ -1,10 +1,10 @@
-function [dataNoOutlier] = OutlierRemoval(data, order)
+function [data] = OutlierRemoval(data, order)
 %OUTLIERREMOVAL Summary of this function goes here
 %   Detailed explanation goes here
 standardDeviation = std(data);
 meanDat = mean(data);
-indicesToRemove = (data < (meanDat-order*standardDeviation)) | (data > (meanDat+order*standardDeviation));
-dataNoOutlier = data;
-dataNoOutlier(indicesToRemove) = [];
+toRemove = (data < (meanDat-order*standardDeviation)) | (data > (meanDat+order*standardDeviation));
+indicesToRemove = find(toRemove);
+for i = 1:size(indicesToRemove)
+    data(indicesToRemove(i)) = (data(indicesToRemove(i) - 1) + data(indicesToRemove(i) + 1))/2;
 end
-
