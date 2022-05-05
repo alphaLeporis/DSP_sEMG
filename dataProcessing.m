@@ -1,8 +1,17 @@
-function [out] = dataProcessing(data, outlierOrder, isRMS, isMVC, filterNr, filterOrder, low, high)
+function [out] = dataProcessing(data, outlierOrder, outlierNr, isRMS, isMVC, filterNr, filterOrder, low, high)
 %MVC Summary of this function goes here
 %   Detailed explanation goes here
 dataMv = (data(:,3:7)./(2^16)-1/2).*3;
-dataNoOut = OutlierRemoval(dataMv,outlierOrder);
+switch outlierNr
+    case 1
+        dataNoOut = OutlierSTD(dataMv, outlierOrder);
+    case 2
+        dataNoOut =IQROutlier(dataMv);
+    case 3 
+        dataNoOut = StudentizedDeviateTest(dataMv);
+    case 4
+        dataNoOut =ZScore(dataMv);
+end
 fftData= fft(dataNoOut);
 if(isRMS)
     out = MovingRMS(fftData);
