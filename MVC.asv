@@ -1,4 +1,4 @@
-function [outMVC] = MVC(path, order, isRMS)
+function [outMVC] = dataProcessing(path, order, isRMS, isMVC, filterNr, order, low, high)
 %MVC Summary of this function goes here
 %   Detailed explanation goes here
 [data, t, header] = FileParser(path);
@@ -8,7 +8,16 @@ fftData= fft(dataNoOut);
 if(isRMS)
     out = MovingRMS(fftData);
 else
-    out =
+    switch filterNR
+        case 1
+            Cheby1()
+        case 2
+
+        case 3
+
+        case 4
+
+        case 5
 end if
 outputArg1 = inputArg1;
 outputArg2 = inputArg2;
