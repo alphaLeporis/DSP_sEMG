@@ -10,15 +10,15 @@ if(isRMS)
 else
     switch filterNr
         case 1
-            outFilt = Cheby1(data, low, high, filterOrder);
+            outFilt = Cheby1(fftData, low, high, filterOrder);
         case 2
-            outFilt = Cheby2(data, low, high, filterOrder);
+            outFilt = Cheby2(fftData, low, high, filterOrder);
         case 3
-            outFilt = ButtWorth(data, low, high, filterOrder);
+            outFilt = ButtWorth(fftData, low, high, filterOrder);
         case 4
-            outFilt = Bessel(data, low, high, filterOrder);
+            outFilt = Bessel(fftData, low, high, filterOrder);
         case 5
-            outFilt = Ellip(data, low, high, filterOrder);
+            outFilt = Ellip(fftData, low, high, filterOrder);
     end
     out = abs(outFilt);
 end
