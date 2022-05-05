@@ -1,7 +1,6 @@
-function [out] = dataProcessing(path, outlierOrder, isRMS, isMVC, filterNr, filterOrder, low, high)
+function [out] = dataProcessing(data, outlierOrder, isRMS, isMVC, filterNr, filterOrder, low, high)
 %MVC Summary of this function goes here
 %   Detailed explanation goes here
-[data, t, header] = FileParser(path);
 dataMv = (data(:,3:7)./(2^16)-1/2).*3;
 dataNoOut = OutlierRemoval(dataMv,outlierOrder);
 fftData= fft(dataNoOut);
