@@ -1,6 +1,6 @@
 function [data] = IQROutlier(data)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%IQROutlier Detects and removes outliers using interquartile distance
+%method
 toRemove= isoutlier(data, "quartiles");
 indicesToRemove = find(toRemove);
 clms = size(data, 1);

@@ -1,6 +1,5 @@
 function [data] = OutlierSTD(data, order)
-%OUTLIERREMOVAL Summary of this function goes here
-%   Removes outliers
+%OutlierSTD Removes outliers based on the STD (standard deviation) method
 standardDeviation = std(data);
 meanDat = mean(data);
 toRemove = (data < (meanDat-order*standardDeviation)) | (data > (meanDat+order*standardDeviation));
