@@ -16,9 +16,9 @@ f=sampleIndex*df; %x-axis index converted to ordered frequencies
 stem(f,abs(fftData(N/2:N, 1))); %magnitudes vs frequencies
 xlabel('f (Hz)'); ylabel('|X(k)|');
 figure
-phase=atan2(imag(fftData(N/2:N,1)),real(fftData(N/2:N,1)))*180/pi; %phase information
+phase=atan2(imag(fftData(N/2:N,1)), real(fftData(N/2:N,1)) )*180/pi; %phase information
 plot(f,phase); %phase vs frequency
 
-newDat = OutlierRemoval(data(:,3:7), 2)
+
 meanFreq = meanfreq(data);
 medianFreq = medfreq(data);
