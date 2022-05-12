@@ -1,9 +1,10 @@
 function [data, t, header] = FileParser(file)
-    addpath('./json')
+%Parses the raw data, and extracts the header with metadata
+    addpath('./json') %Uses JSON library
 
     headerlines = 3;
 
-    data = textread(file,'','headerlines', headerlines);
+    data = textread(file,'','headerlines', headerlines); %Read from file
 
     header = {};
 
@@ -13,7 +14,7 @@ function [data, t, header] = FileParser(file)
     end
     fclose(fid);
     
-    header = JSON.parse(strrep(header{2}(2:end),' ',''));
+    header = JSON.parse(strrep(header{2}(2:end),' ','')); %Parse header
     
     devices = fieldnames(header);
     srate = header.(devices{1}).samplingrate;
