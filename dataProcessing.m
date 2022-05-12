@@ -28,9 +28,7 @@ else %If filterting is chosen
             outFilt = Cheby2(fftData, low, high, filterOrder);
         case 3 %Butterworth filter
             outFilt = ButtWorth(fftData, low, high, filterOrder);
-        case 4 %Bessel filter
-            outFilt = bessel(fftData, low, high, filterOrder);
-        case 5 %Elliptical filter
+        case 4 %Elliptical filter
             outFilt = Ellip(fftData, low, high, filterOrder);
     end
     out = abs(outFilt); %Rectify data
