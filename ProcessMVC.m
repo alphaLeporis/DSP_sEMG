@@ -1,6 +1,5 @@
 function [normalized] = ProcessMVC(data, max)
-%PROCESSMVC Summary of this function goes here
-%   Detailed explanation goes here
+%Calculates the normallized values based on the MVC
 normalized = data./max;
 end
 

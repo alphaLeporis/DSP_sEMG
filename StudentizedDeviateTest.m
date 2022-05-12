@@ -1,6 +1,6 @@
 function [data] = StudentizedDeviateTest(data)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%Removes outlier based on the GESD (generalized extreme student deviate
+%test)
 toRemove= isoutlier(data, "gesd");
 indicesToRemove = find(toRemove);
 clms = size(data, 1);

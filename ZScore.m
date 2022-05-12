@@ -1,6 +1,5 @@
 function [data] = ZScore(data)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%Removes outlier based on the ZScore
 toRemove= isoutlier(data, "median");
 indicesToRemove = find(toRemove);
 clms = size(data, 1);
