@@ -29,7 +29,7 @@ else %If filterting is chosen
         case 3 %Butterworth filter
             outFilt = ButtWorth(fftData, low, high, filterOrder);
         case 4 %Bessel filter
-            outFilt = Bessel(fftData, low, high, filterOrder);
+            outFilt = bessel(fftData, low, high, filterOrder);
         case 5 %Elliptical filter
             outFilt = Ellip(fftData, low, high, filterOrder);
     end
