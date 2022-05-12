@@ -1,6 +1,5 @@
 function [output] = savGolay(data, order, framelen)
-%SAVGOLAY Summary of this function goes here
-%   Detailed explanation goes here
+%Uses the govitsky golay smoothing filter
 output = sgaolayfilt(data, order, framelen);
 end
 

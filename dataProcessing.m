@@ -1,4 +1,4 @@
-function [out] = dataProcessing(data, outlierOrder, outlierNr, isRMS, isMVC, filterNr, filterOrder, low, high)
+function [out] = dataProcessing(data, outlierOrder, outlierNr, isRMS, isMVC, filterNr, filterOrder, low, high, len, overlap)
 %MVC Summary of this function goes here
 %   Detailed explanation goes here
 dataMv = (data(:,3:7)./(2^16)-1/2).*3;
@@ -14,7 +14,7 @@ switch outlierNr
 end
 fftData= fft(dataNoOut);
 if(isRMS)
-    out = MovingRMS(fftData);
+    out = MovingRMS(fftData, len, overlap);
 else
     switch filterNr
         case 1
