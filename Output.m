@@ -1,4 +1,4 @@
-function [] = Output(out,outlierOrder, outlierNr, isRMS, isMVC, filterNr, filterOrder, low, high, len, overlap, isSG, SGorder, SGlength)
+function [] = Output(outputfile, out,outlierOrder, outlierNr, isRMS, isMVC, filterNr, filterOrder, low, high, len, overlap, isSG, SGorder, SGlength)
 %OUTPUT Outputs the processed data to a file
 switch outlierNr
     case 1
@@ -20,7 +20,7 @@ switch filterNr
         case 4
             filter = 'Elliptic';
 end
-fid = fopen( 'results.txt', 'wt' );
+fid = fopen(outputfile, 'wt' );
 fprintf(fid, '%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s \n', 'OutlierMethod', 'RMS used', 'RMS window length', 'RMS overlap', 'Filter Type', 'Filter order', 'low', 'high', 'Savitsky Golay', 'SGOrder', 'SGLength');
 fprintf(fid, '%s,%d,%d,%d,%s,%d,%d,%d,%d,%d,%d \n', outlier, isRMS, len, overlap, filter, filterOrder, low, high, isSG, SGOrder, SGLength);
 fprintf(fid, '%s,%s,%s,%s,%s \n', 'CH1', 'CH2', 'CH3', 'CH4', 'CH5');
