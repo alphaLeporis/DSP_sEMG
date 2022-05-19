@@ -25,7 +25,7 @@ fprintf(fid, '%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s \n', 'OutlierMethod', 'RMS used',
 fprintf(fid, '%s,%d,%d,%d,%s,%i,%i,%i,%i,%d,%d \n', outlier, isRMS, len, overlap, filter, filterOrder, low, high, isSG, SGorder, SGlength);
 fprintf(fid, '%s,%s,%s,%s,%s \n', 'CH1', 'CH2', 'CH3', 'CH4', 'CH5');
 for n = 1:size(out, 1)
-  fprintf( fid, '%f,%f,%f,%f,%f\n', out(n, 1), out(n,2), out(n,3), out(n,4), out(n,5));
+  fprintf( fid, '%f\n', out(n));
 end
 fclose(fid);
 end
