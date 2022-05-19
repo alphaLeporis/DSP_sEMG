@@ -18,8 +18,6 @@ switch filterNr
         case 3
             filter = 'Butterworth';
         case 4
-            filter = 'Bessel';
-        case 5
             filter = 'Elliptic';
 end
 fid = fopen( 'results.txt', 'wt' );
