@@ -23,7 +23,7 @@ end
 fid = fopen(outputfile, 'wt' );
 fprintf(fid, '%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s \n', 'OutlierMethod', 'RMS used', 'RMS window length', 'RMS overlap', 'Filter Type', 'Filter order', 'low', 'high', 'Savitsky Golay', 'SGOrder', 'SGLength');
 fprintf(fid, '%s,%d,%d,%d,%s,%i,%i,%i,%i,%d,%d \n', outlier, isRMS, len, overlap, filter, filterOrder, low, high, isSG, SGorder, SGlength);
-fprintf(fid, '%s,%s,%s,%s,%s \n', 'CH1', 'CH2', 'CH3', 'CH4', 'CH5');
+fprintf(fid, '%s \n', 'Output');
 for n = 1:size(out, 1)
   fprintf( fid, '%f\n', out(n));
 end
