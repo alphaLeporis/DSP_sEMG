@@ -1,4 +1,4 @@
-function [data, t, header] = FileParser(file)
+function [data, t, header, srate] = FileParser(file)
 %Parses the raw data, and extracts the header with metadata
     addpath('./json') %Uses JSON library
 

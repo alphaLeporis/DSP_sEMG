@@ -21,6 +21,7 @@ switch filterNr
             filter = 'Elliptic';
 end
 fid = fopen(outputfile, 'wt' );
+fprintf(fid, '%s \n', outputfile);
 fprintf(fid, '%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s \n', 'OutlierMethod', 'RMS used', 'RMS window length', 'RMS overlap', 'Filter Type', 'Filter order', 'low', 'high', 'Savitsky Golay', 'SGOrder', 'SGLength');
 fprintf(fid, '%s,%d,%d,%d,%s,%i,%u,%u,%u,%d,%d \n', outlier, isRMS, len, overlap, filter, filterOrder, low, high, isSG, SGorder, SGlength);
 fprintf(fid, '%s \n', 'Output');

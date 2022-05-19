@@ -22,6 +22,8 @@ else %If filterting is chosen
         fftData = savGolay(fftData, SGorder, SGlength);
     end
     switch filterNr %Select the desired filter
+        case 0
+            outFilt = fftData;
         case 1 %Chebishev 1 filter
             outFilt = Cheby1(fftData, low, high, filterOrder);
         case 2 %Chebyshev 2 filter
