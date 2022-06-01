@@ -1,0 +1,83 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="3164779367" file="/Users/louisdelooze/dev/DSP_sEMG/Fast sEMG.prj" location="/Users/louisdelooze/dev/DSP_sEMG" name="Fast sEMG" target="target.mlapps" target-name="Package App">
+    <param.appname>Fast sEMG</param.appname>
+    <param.authnamewatermark>Alexander Michielsen, Louis de Looze</param.authnamewatermark>
+    <param.email />
+    <param.company />
+    <param.icon>${PROJECT_ROOT}/Fast sEMG_resources/icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}/Fast sEMG_resources/icon_48.png</file>
+      <file>${PROJECT_ROOT}/Fast sEMG_resources/icon_24.png</file>
+      <file>${PROJECT_ROOT}/Fast sEMG_resources/icon_16.png</file>
+    </param.icons>
+    <param.summary>This software is developed for processing sEMG data signals in order to extract useful data in the frequency
+domain.</param.summary>
+    <param.description />
+    <param.screenshot>/private/var/folders/6z/yh53_wxj5cz9cvf_cywwzb440000gn/T/tp9bfb5486_6ef1_4d84_9c4e_9af093b5c51d.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>ed35a223-d353-4e60-a65e-05c98b133ae5</param.guid>
+    <unset>
+      <param.email />
+      <param.company />
+      <param.description />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}/gui.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}/ButtWorth.m</file>
+      <file>${PROJECT_ROOT}/Cheby1.m</file>
+      <file>${PROJECT_ROOT}/Cheby2.m</file>
+      <file>${PROJECT_ROOT}/Ellip.m</file>
+      <file>${PROJECT_ROOT}/FileParser.m</file>
+      <file>${PROJECT_ROOT}/IQROutlier.m</file>
+      <file>${PROJECT_ROOT}/MovingRMS.m</file>
+      <file>${PROJECT_ROOT}/OutlierSTD.m</file>
+      <file>${PROJECT_ROOT}/Output.m</file>
+      <file>${PROJECT_ROOT}/ProcessMVC.m</file>
+      <file>${PROJECT_ROOT}/StudentizedDeviateTest.m</file>
+      <file>${PROJECT_ROOT}/ZScore.m</file>
+      <file>${PROJECT_ROOT}/dataProcessing.m</file>
+      <file>${PROJECT_ROOT}/logo.png</file>
+      <file>${PROJECT_ROOT}/savGolay.m</file>
+    </fileset.depfun>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}/json</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="/Users/louisdelooze/dev" name="DSP_sEMG" optional="false">/Users/louisdelooze/dev/DSP_sEMG</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>/Applications/MATLAB_R2021b.app</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>true</unix>
+      <mac>true</mac>
+      <windows>false</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>12.3</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>maci64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
